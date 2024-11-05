@@ -1,0 +1,70 @@
+/* src/Card.css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+.app h2 {
+    text-align: center;
+    margin: 50px 0 20px 0;
+    color: hsl(221, 100%, 73%);
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.card {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff6b6b, #f7d9a1);
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #ffffff;
+    animation: borderAnimation 5s infinite;  
+}
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .card-title {
+    font-size: 1.1em;
+    margin: 0 0 10px;
+  }
+  
+  .card-description {
+    font-size: 1em;
+    color: hsl(221, 100%, 73%);
+  }
+  
+
+  @keyframes borderAnimation {
+    0% { background: linear-gradient(45deg, #f08a37, #f8dd62); }
+    25% { background: linear-gradient(45deg, #5f0de2, #cf2c27); }
+    50% { background: linear-gradient(45deg, #61d4ae, #3680ee); }
+    75% {background: linear-gradient(45deg, #d4d63f, #59c230); }
+    100% {background: linear-gradient(45deg, #f89501, #62e724); }
+}
